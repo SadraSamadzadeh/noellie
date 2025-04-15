@@ -127,7 +127,7 @@ Please change the parent <Route path="${q}"> to <Route path="${q==="/"?"*":`${q}
     padding: 8px;
     border-radius: 12px;
     max-width: 150px;
-}`;function Sp(){return at.jsxs(bp,{children:[at.jsxs(Tp,{children:[at.jsx(Ap,{children:"Hi, I'm Noëlle"}),at.jsx(xp,{children:"Media Design Student"}),at.jsxs(Rp,{children:["Media Designer who is an enthousiastic animatior, can take professional photograps,",at.jsx("br",{}),"has skill and heart for design. But the most important passion would be to tell a story with art."]}),at.jsx(yp,{Icon:at.jsx(Hr.Telegram,{}),children:"Contact Me"})]}),at.jsx(Ep,{})]})}const bp=ae.div`
+}`;function Sp(){return at.jsxs(bp,{children:[at.jsxs(Tp,{children:[at.jsx(Ap,{children:"Hi, I'm Noëlle"}),at.jsx(xp,{children:"Media Design Student"}),at.jsxs(Rp,{children:["Media Designer who is an enthousiastic animatior, can take professional photographs,",at.jsx("br",{}),"has skill and heart for design. But the most important passion would be to tell a story with art."]}),at.jsx(yp,{Icon:at.jsx(Hr.Telegram,{}),children:"Contact Me"})]}),at.jsx(Ep,{})]})}const bp=ae.div`
 display: flex;
 padding: 20px;
 margin: 200px;

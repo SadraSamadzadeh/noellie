@@ -30,7 +30,7 @@ function Navbar({ isDark, toggleTheme } : {isDark: boolean, toggleTheme: () => v
                 <NavMenuItem to="/skills">Skills</NavMenuItem>
                 <NavMenuItem to="/portfolio">Portfolio</NavMenuItem>
                 <NavMenuItem to="/contact">Contact</NavMenuItem>
-                <ThemeToggle onClick={toggleTheme}>{isDark ? <Icons.Sun style={{color: theme.text}}/> : <Icons.Moon style={{color: theme.text}} />}</ThemeToggle>
+                <ThemeToggle onClick={toggleTheme}>{isDark ? <Icons.Sun style={{color: theme.textPrimary}}/> : <Icons.Moon style={{color: theme.textPrimary}} />}</ThemeToggle>
             </RightMenu>
         </MainDiv>
     )
@@ -62,16 +62,16 @@ const MainDiv = styled.div`
 `
 const LogoName = styled.h1`
     font-size: 32px;
-    color: ${(props) => props.theme.header};
+    color: ${(props) => props.theme.textPrimary};
 `
 const Item = styled(Link)<NavItemProps>`
-    color: ${(props) => (props.$active ? props.theme.hoverText : props.theme.text)};
+    color: ${(props) => (props.$active ? props.theme.primary : props.theme.textPrimary)};
     text-decoration: none;
     font-size: 24px;
     padding: 12px;
     border-radius: 16px;
     &:hover {
-        color: ${(props) => (props.theme.hoverText)}
+        color: ${(props) => (props.theme.primary)}
     }
 `
 

@@ -1,23 +1,26 @@
 import styled from "styled-components";
+import Button from "./Button";
+import Icons from "../assets/icons";
 function Hero() {
   return (
     <Container>
     <TextContainer>
         <Header>
-            Hi, Im Noëlle
+            Hi, I'm Noëlle
         </Header>
         <SubHeader>
-            Mediaformgeving Student
+            Media Design Student
         </SubHeader>
         <Description>
-        blah blah blah lorem ipsum shit
+        Media Designer who is an enthousiastic animatior, can take professional photograps, 
+        <br/>has skill and heart for design. But the most important passion would be to tell a story with art.
         </Description>
-        <Button>
+        <Button Icon={<Icons.Telegram/>}>
             Contact Me
         </Button>
     </TextContainer>
     <ImageContainer>
-        <img src='../assets/image.png'/>
+        {/* <img src='../assets/image.png'/> */}
     </ImageContainer>
     </Container>
   )
@@ -27,6 +30,7 @@ function Hero() {
 const Container = styled.div`
 display: flex;
 padding: 20px;
+margin: 200px;
 `;
 const ImageContainer = styled.div`
 display: flex;
@@ -39,16 +43,15 @@ flex-direction: column;
 gap: 16px;
 `;
 const Header = styled.div`
-font-size: 64px;
-color: ${(props) => props.theme.header};
+font-size: 56px;
+color: ${(props) => props.theme.textPrimary};
 `;
 const SubHeader = styled.div`
-font-size: 48px;
-color: ${(props) => props.theme.subHeader}
+font-size: 36px;
+color: ${(props) => props.theme.textSecondary}
 `; 
 const Description = styled.div`
-
-`;
-const Button = styled.button`
+    color: ${(props) => props.theme.textPrimary};
+    font-size: 20px;
 `;
 export default Hero

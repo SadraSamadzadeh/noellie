@@ -12,7 +12,7 @@ function Hero() {
             Media Design Student
         </SubHeader>
         <Description>
-        Media Designer who is an enthousiastic animatior, can take professional photograps, 
+        Media Designer who is an enthousiastic animatior, can take professional photographs, 
         <br/>has skill and heart for design. But the most important passion would be to tell a story with art.
         </Description>
         <Button Icon={<Icons.Telegram/>}>

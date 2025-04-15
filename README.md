@@ -1,6 +1,9 @@
-- [ ] adding light and dark theme 
-    - [ ] adding the toggle button in the navbar
-        - [ ] change the icon and button to look better 
-    - [ ] adding correct color codes for every situations to be used later
+- [X] adding light and dark theme 
+    - [X] adding the toggle button in the navbar
+        - [X] change the icon and button to look better 
+    - [X] adding correct color codes for every situations to be used later (this will grow the more content is on the page)
 - [ ] Make hero section 
     - [ ] ask Noelle for content and ideas about the picture
+- [ ] Portfolio secition --> Photography / Animation / Character design / Graphic design / Sketches / Film
+- [ ] Get a logo from noelle later for the navbar and the webpage identifier
+- [ ] Hero  section 

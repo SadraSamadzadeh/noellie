@@ -1,5 +1,6 @@
-import styled from "styled-components"
+import styled, { useTheme } from "styled-components"
 import { Link, useLocation } from 'react-router-dom';
+import Icons from "../assets/icons";
 interface NavItemProps {
     $active: boolean;
   }
@@ -10,7 +11,6 @@ interface NavItemProps {
   const NavMenuItem: React.FC<NavMenuItemProps> = ({ to, children }) => {
     const location = useLocation();
     const isActive = location.pathname === to;
-  
     return (
       <Item to={to} $active={isActive}>
         {children}
@@ -18,38 +18,39 @@ interface NavItemProps {
     );
   };
 function Navbar({ isDark, toggleTheme } : {isDark: boolean, toggleTheme: () => void}) {
+  const theme = useTheme();
     return (
         <MainDiv>
             <div>
             <LogoName>Noëlle</LogoName>
             </div>
-            <div>
+            <RightMenu>
                 <NavMenuItem to="/">Home</NavMenuItem>
                 <NavMenuItem to="/about">About</NavMenuItem>
                 <NavMenuItem to="/skills">Skills</NavMenuItem>
                 <NavMenuItem to="/portfolio">Portfolio</NavMenuItem>
                 <NavMenuItem to="/contact">Contact</NavMenuItem>
-                <ThemeToggle onClick={toggleTheme}>{isDark ? '☀️ Light Mode' : '🌙 Dark Mode'}</ThemeToggle>
-            </div>
+                <ThemeToggle onClick={toggleTheme}>{isDark ? <Icons.Sun style={{color: theme.text}}/> : <Icons.Moon style={{color: theme.text}} />}</ThemeToggle>
+            </RightMenu>
         </MainDiv>
     )
 }
 
-
+const RightMenu = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
 const ThemeToggle = styled.button`
-  padding: 8px 12px;
-  font-size: 0.9rem;
   cursor: pointer;
-  background: none;
-  border: 1px solid ${(props) => props.theme.text};
-  color: ${(props) => props.theme.text};
-  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
   transition: background 0.3s ease;
-
-  &:hover {
-    background: ${(props) => props.theme.text};
-    color: ${(props) => props.theme.background};
-  }
+  background: none;
+  border: none;
+  padding: 12px;
+  border-radius: 16px;
 `;
 
 const MainDiv = styled.div`
@@ -61,7 +62,7 @@ const MainDiv = styled.div`
 `
 const LogoName = styled.h1`
     font-size: 32px;
-    color: gray;
+    color: ${(props) => props.theme.header};
 `
 const Item = styled(Link)<NavItemProps>`
     color: ${(props) => (props.$active ? props.theme.hoverText : props.theme.text)};
